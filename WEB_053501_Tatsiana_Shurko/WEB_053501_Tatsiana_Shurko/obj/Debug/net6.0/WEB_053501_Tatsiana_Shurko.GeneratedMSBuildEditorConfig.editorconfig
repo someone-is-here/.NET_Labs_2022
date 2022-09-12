@@ -19,8 +19,20 @@ build_property._RazorSourceGeneratorDebug =
 build_metadata.AdditionalFiles.TargetPath = QXJlYXNcSWRlbnRpdHlcUGFnZXNcX1ZpZXdTdGFydC5jc2h0bWw=
 build_metadata.AdditionalFiles.CssScope = 
 
+[D:/University/C\# Labs/WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Views/Home/Components/CartComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXENhcnRDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/C\# Labs/WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Views/Home/Components/MenuComponent/Default.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxDb21wb25lbnRzXE1lbnVDb21wb25lbnRcRGVmYXVsdC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
 [D:/University/C\# Labs/WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Views/Home/Index.cshtml]
 build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxJbmRleC5jc2h0bWw=
+build_metadata.AdditionalFiles.CssScope = 
+
+[D:/University/C\# Labs/WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Views/Home/_UserPartial.cshtml]
+build_metadata.AdditionalFiles.TargetPath = Vmlld3NcSG9tZVxfVXNlclBhcnRpYWwuY3NodG1s
 build_metadata.AdditionalFiles.CssScope = 
 
 [D:/University/C\# Labs/WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Views/Shared/Error.cshtml]
