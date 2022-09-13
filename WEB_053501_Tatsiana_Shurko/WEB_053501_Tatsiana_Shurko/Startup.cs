@@ -23,6 +23,17 @@ namespace WEB_053501_Tatsiana_Shurko {
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+/*            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = false;
+            })
+.AddEntityFrameworkStores<ApplicationDbContext>();
+.AddDefaultTokenProviders();
+            services.AddAuthorization();*/
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
@@ -34,11 +45,6 @@ namespace WEB_053501_Tatsiana_Shurko {
             }
 
             app.UseHttpsRedirection();
-
-            /*            DefaultFilesOptions options = new DefaultFilesOptions();
-                        options.DefaultFileNames.Clear();
-                        options.DefaultFileNames.Add("Lab1.html");*/
-            /*    app.UseDefaultFiles(options);*/
 
             app.UseStaticFiles();
 
