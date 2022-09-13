@@ -35,11 +35,6 @@ namespace WEB_053501_Tatsiana_Shurko {
 
             app.UseHttpsRedirection();
 
-            /*            DefaultFilesOptions options = new DefaultFilesOptions();
-                        options.DefaultFileNames.Clear();
-                        options.DefaultFileNames.Add("Lab1.html");*/
-            /*    app.UseDefaultFiles(options);*/
-
             app.UseStaticFiles();
 
             app.UseRouting();
