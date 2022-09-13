@@ -23,6 +23,17 @@ namespace WEB_053501_Tatsiana_Shurko {
 
             services.AddControllersWithViews();
             services.AddRazorPages();
+/*            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+            {
+                options.SignIn.RequireConfirmedAccount = false;
+                options.Password.RequireLowercase = false;
+                options.Password.RequireNonAlphanumeric = false;
+                options.Password.RequireUppercase = false;
+                options.Password.RequireDigit = false;
+            })
+.AddEntityFrameworkStores<ApplicationDbContext>();
+.AddDefaultTokenProviders();
+            services.AddAuthorization();*/
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
