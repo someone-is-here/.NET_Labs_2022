@@ -9,7 +9,9 @@ using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Options;
 using WEB_053501_Tatsiana_Shurko.Data;
+using WEB_053501_Tatsiana_Shurko.Entities;
 
 namespace WEB_053501_Tatsiana_Shurko {
     public class Startup {
@@ -23,7 +25,11 @@ namespace WEB_053501_Tatsiana_Shurko {
 
             services.AddControllersWithViews();
             services.AddRazorPages();
-/*            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+options.UseSqlServer(
+Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
             {
                 options.SignIn.RequireConfirmedAccount = false;
                 options.Password.RequireLowercase = false;
@@ -31,9 +37,11 @@ namespace WEB_053501_Tatsiana_Shurko {
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;
             })
-.AddEntityFrameworkStores<ApplicationDbContext>();
-.AddDefaultTokenProviders();
-            services.AddAuthorization();*/
+            .AddDefaultUI()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+
+            services.AddAuthorization();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
