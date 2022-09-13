@@ -10,6 +10,8 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using WEB_053501_Tatsiana_Shurko.Data;
+using WEB_053501_Tatsiana_Shurko.Entities;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 
 namespace WEB_053501_Tatsiana_Shurko {
     public class Startup {
@@ -20,9 +22,23 @@ namespace WEB_053501_Tatsiana_Shurko {
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services) {
-
             services.AddControllersWithViews();
             services.AddRazorPages();
+
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+            services.AddIdentity<ApplicationUser, IdentityRole>(opt => {
+                opt.Password.RequireLowercase = false;
+                opt.Password.RequireNonAlphanumeric = false;
+                opt.Password.RequireUppercase = false;
+                opt.Password.RequireDigit = false;
+            })
+            .AddDefaultUI()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
+
+            services.AddAuthorization();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
@@ -34,11 +50,6 @@ namespace WEB_053501_Tatsiana_Shurko {
             }
 
             app.UseHttpsRedirection();
-
-            /*            DefaultFilesOptions options = new DefaultFilesOptions();
-                        options.DefaultFileNames.Clear();
-                        options.DefaultFileNames.Add("Lab1.html");*/
-            /*    app.UseDefaultFiles(options);*/
 
             app.UseStaticFiles();
 
