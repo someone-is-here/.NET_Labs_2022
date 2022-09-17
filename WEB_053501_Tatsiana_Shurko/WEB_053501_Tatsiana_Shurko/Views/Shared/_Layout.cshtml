@@ -1,4 +1,9 @@
-﻿<!DOCTYPE html>
+﻿@using Microsoft.AspNetCore.Identity
+@using WEB_053501_Tatsiana_Shurko.Entities
+@inject SignInManager<ApplicationUser> SignInManager
+@inject UserManager<ApplicationUser> UserManager
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="utf-8" />
@@ -16,8 +21,11 @@
                 <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                     @await Component.InvokeAsync("MenuComponent")
                 </div>
-                @await Component.InvokeAsync("CartComponent")
-                <partial name="_UserPartial"/>
+                <partial name="_LoginPartial"/>
+                @if (SignInManager.IsSignedIn(User)) {
+                        @await Component.InvokeAsync("CartComponent")
+                        <partial name="_UserPartial"/>
+                }
             </nav>
         </div>
     </header>

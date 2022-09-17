@@ -22,24 +22,27 @@ namespace WEB_053501_Tatsiana_Shurko {
         public IConfiguration Configuration { get; }
 
         public void ConfigureServices(IServiceCollection services) {
+            services.ConfigureApplicationCookie(options => {
+                options.LoginPath = $"/Identity/Account/Login";
+                options.LogoutPath = $"/Identity/Account/Logout";
+            });
+
+
 
             services.AddControllersWithViews();
             services.AddRazorPages();
 
             services.AddDbContext<ApplicationDbContext>(options =>
-options.UseSqlServer(
-Configuration.GetConnectionString("DefaultConnection")));
-            services.AddIdentity<ApplicationUser, IdentityRole>(options =>
-            {
-                options.SignIn.RequireConfirmedAccount = false;
+                options.UseSqlServer(
+                    Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddIdentity<ApplicationUser, IdentityRole>(options => {
                 options.Password.RequireLowercase = false;
                 options.Password.RequireNonAlphanumeric = false;
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;
-            })
-            .AddDefaultUI()
-            .AddEntityFrameworkStores<ApplicationDbContext>()
-            .AddDefaultTokenProviders();
+                options.SignIn.RequireConfirmedAccount = true;
+            }).AddDefaultUI().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
 
             services.AddAuthorization();
         }
@@ -58,13 +61,17 @@ Configuration.GetConnectionString("DefaultConnection")));
 
             app.UseRouting();
 
+            app.UseAuthentication();
             app.UseAuthorization();
+
+            DbInitializer.Initialize(app);
 
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
                     name: "default",
                     pattern: "{controller=Home}/{action=Index}/{id?}");
+                endpoints.MapRazorPages();
             });
         }
     }

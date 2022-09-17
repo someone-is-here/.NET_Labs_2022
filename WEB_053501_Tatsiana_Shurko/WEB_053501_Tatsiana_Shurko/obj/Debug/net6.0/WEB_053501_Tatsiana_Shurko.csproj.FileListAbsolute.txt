@@ -269,3 +269,5 @@ D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Drawing.Common.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Security.Cryptography.ProtectedData.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
