@@ -7,8 +7,8 @@ namespace WEB_053501_Tatsiana_Shurko.Components {
     public class MenuComponent : ViewComponent {
         private List<MenuItem> _menuItems = new List<MenuItem> {
             new MenuItem{ Controller="Home", Action="Index", Text="Lab 2" },
-            new MenuItem{ Controller="Product", Action="Index", Text="Catalog" },
-            new MenuItem{ Controller="Admin", Action="/Index", Text="Administration" },
+            new MenuItem{ Controller="Book", Action="Index", Text="Catalog" },
+            new MenuItem{ Controller="Admin", Action="Index", Text="Administration" },
         };
 
         public IViewComponentResult Invoke() {

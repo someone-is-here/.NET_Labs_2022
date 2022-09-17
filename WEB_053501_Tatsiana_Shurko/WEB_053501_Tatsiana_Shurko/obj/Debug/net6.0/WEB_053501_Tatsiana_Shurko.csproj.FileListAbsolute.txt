@@ -68,7 +68,6 @@ D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\MessagePack.Annotations.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.AspNetCore.Razor.Language.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Bcl.AsyncInterfaces.dll
-D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Build.Locator.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.CodeAnalysis.AnalyzerUtilities.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.CodeAnalysis.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.CodeAnalysis.CSharp.dll
@@ -271,3 +270,6 @@ D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\runtimes\win\lib\net6.0\System.Windows.Extensions.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.DotNet.PlatformAbstractions.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Extensions.DependencyModel.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Build.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Build.Framework.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
