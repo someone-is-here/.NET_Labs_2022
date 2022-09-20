@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "vzJnNNSAARPtVuyYuY1ixF/4Z+TXkaQxaeHUjmIzNsrI0ZC/cctXFw3ZOLN98TrpwdKWCHqaggXOKNWftpXhlw==",
+  "dgSpecHash": "Lizl9CwxFj08tfUz9MGa3RNc4/6R2KPIKPXc3/GaIkVp/TxRXemkE5aA8kBJsxKmbQ0Xf6ve1UX83/2Q3F8yXA==",
   "success": true,
   "projectFilePath": "D:\\University\\C# Labs\\WEB_053501_Tatsiana_Shurko\\WEB_053501_Tatsiana_Shurko\\WEB_053501_Tatsiana_Shurko.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Татьяна\\.nuget\\packages\\automapper\\11.0.1\\automapper.11.0.1.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\messagepack\\2.1.152\\messagepack.2.1.152.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\messagepack.annotations\\2.1.152\\messagepack.annotations.2.1.152.nupkg.sha512",
@@ -48,7 +49,7 @@
     "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.codeanalysis.visualbasic.workspaces\\4.0.0\\microsoft.codeanalysis.visualbasic.workspaces.4.0.0.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.codeanalysis.workspaces.common\\4.0.0\\microsoft.codeanalysis.workspaces.common.4.0.0.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.codeanalysis.workspaces.msbuild\\4.0.0\\microsoft.codeanalysis.workspaces.msbuild.4.0.0.nupkg.sha512",
-    "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",
+    "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.csharp\\4.7.0\\microsoft.csharp.4.7.0.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.data.sqlclient\\2.1.4\\microsoft.data.sqlclient.2.1.4.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.data.sqlclient.sni.runtime\\2.1.1\\microsoft.data.sqlclient.sni.runtime.2.1.1.nupkg.sha512",
     "C:\\Users\\Татьяна\\.nuget\\packages\\microsoft.diasymreader\\1.3.0\\microsoft.diasymreader.1.3.0.nupkg.sha512",

@@ -2,33 +2,46 @@
 
 @{
     ViewData["Title"] = "View";
+    var categories = ViewData["Categories"] as IEnumerable<Category>;
+    int currentGroup = (int)ViewData["CurrentCategory"];
+    var text = currentGroup != 0
+        ? categories
+        .FirstOrDefault(g => g.Id == currentGroup)?
+        .Title
+        : "All";
 }
-@{
-    // Получение текущего адреса
-    var request = ViewContext.HttpContext.Request;
-    var returnUrl = request.Path + request.QueryString.ToUriComponent();
-}
+
 <h1>View</h1>
 
 <p>
     <a asp-action="Create">Create New</a>
 </p>
-<div class="row">
-@foreach (var item in Model) {
-      <div class="col-sm-4" style="margin-bottom:15px;">
-        <div class="card">
-          <div class="card-body" style="text-align:center;">
-              <img src="@item.ImagePath" style="height:100px; width:70px;"></img>
-            <h5 class="card-title">@item.Title</h5>
-            <p class="card-text">@item.Discription</p>
-                 <h3 class="card-subtitle badge">@item.Price</h3>
-                    <p class="mt-2">
-                        <a asp-action="Add" asp-controller="Cart" asp-route-id="@item.Id" asp-route-returnUrl="@returnUrl" class="btn btn-primary">
-                            <i class="fa fa-shopping-cart"></i> To Cart
-                        </a>
-                    </p>
-          </div>
-        </div>
-      </div>
-}
+<div class="container">
+    <div class="card-deck row">
+<div class="col-2">
+<div class="dropdown">
+  <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+    @text
+  </a>
+  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+        @foreach (var cat in @categories) {
+                        @if (!(cat.Title == text)) {
+                            <a class="dropdown-item" href="?group=@cat.Id">@cat.Title</a>
+                        }
+                    }
+                    @if (text != "All") { 
+                                <a class="dropdown-item" asp-action="Index" asp-controller="Book">All</a>
+                    }
+  </div>
 </div>
+
+</div>
+
+        @foreach (var item in Model) {
+            <partial name="_ListItemPartial" model="@item" />
+        }
+</div>
+</div>
+
+
+

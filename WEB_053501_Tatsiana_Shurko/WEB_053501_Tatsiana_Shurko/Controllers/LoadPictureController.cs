@@ -18,11 +18,7 @@ namespace WEB_053501_Tatsiana_Shurko.Controllers {
         }
         
         public async Task<IActionResult> GetImage([FromServices] Microsoft.AspNetCore.Hosting.IWebHostEnvironment env) {
-            //  await (Input.Image).OpenReadStream().ReadAsync(user.Image, 0, (int)(Input.Image).Length);
-            // Input.Image= IFormFile
-            Console.WriteLine("LoadPicture______________________________");
             var user = await GetCurrentUserAsync();
-            Console.WriteLine(user.Image);
 
             if (user != null && user.Image?.Length > 0) {
                 return File(user.Image, user.ContentType);

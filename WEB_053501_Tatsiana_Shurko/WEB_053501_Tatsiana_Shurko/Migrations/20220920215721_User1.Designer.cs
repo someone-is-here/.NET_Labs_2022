@@ -12,8 +12,8 @@ using WEB_053501_Tatsiana_Shurko.Data;
 namespace WEB_053501_Tatsiana_Shurko.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220917203410_AddContentTypeApplicationUser")]
-    partial class AddContentTypeApplicationUser
+    [Migration("20220920215721_User1")]
+    partial class User1
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {

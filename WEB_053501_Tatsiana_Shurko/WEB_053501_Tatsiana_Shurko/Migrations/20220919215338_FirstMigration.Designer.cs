@@ -12,8 +12,8 @@ using WEB_053501_Tatsiana_Shurko.Data;
 namespace WEB_053501_Tatsiana_Shurko.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20220915201724_New migrations")]
-    partial class Newmigrations
+    [Migration("20220919215338_FirstMigration")]
+    partial class FirstMigration
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
@@ -167,6 +167,9 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations
 
                     b.Property<string>("ConcurrencyStamp")
                         .IsConcurrencyToken()
+                        .HasColumnType("nvarchar(max)");
+
+                    b.Property<string>("ContentType")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Email")

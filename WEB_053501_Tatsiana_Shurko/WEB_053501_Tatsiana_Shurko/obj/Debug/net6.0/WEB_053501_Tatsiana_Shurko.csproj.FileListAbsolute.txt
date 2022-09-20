@@ -273,3 +273,4 @@ D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Build.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Build.Framework.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\AutoMapper.dll
