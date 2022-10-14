@@ -1,13 +1,11 @@
 ﻿<div class="dropdown ml-4 nav-color">
         <div class=" dropdown-toggle" id="dropdownMenuButton" data-bs-toggle="dropdown" aria-expanded="false">
-            <img src="@Url.Action("GetImage", "LoadPicture")"
-                             alt="User" style="margin-left: 30px; width: 30px; height: 30px; border-radius: 5em;"/>
+             <image img-action="GetImage" img-controller="LoadPicture"/>
         </div>
         <div class="dropdown-menu"
                          aria-labelledby="dropdownMenuButton">
             <div class="dropdown-item-text" style="text-align:center;">
-                <img src="@Url.Action("GetImage", "LoadPicture")"
-                                 alt="User" style="width: 30px; height: 30px; border-radius: 5em;"/>
+                <image img-action="GetImage" img-controller="LoadPicture"/>
                 <span>@User.Identity.Name</span>
 
             </div>

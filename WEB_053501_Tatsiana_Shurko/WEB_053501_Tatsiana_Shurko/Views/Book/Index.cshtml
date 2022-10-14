@@ -1,47 +1,73 @@
-﻿@model IEnumerable<WEB_053501_Tatsiana_Shurko.Entities.Book>
+﻿@*@page*@
+@model IEnumerable<WEB_053501_Tatsiana_Shurko.Entities.Book>
 
 @{
     ViewData["Title"] = "View";
     var categories = ViewData["Categories"] as IEnumerable<Category>;
+    Console.WriteLine("Vuew" + ViewData["CurrentCategory"]);
     int currentGroup = (int)ViewData["CurrentCategory"];
     var text = currentGroup != 0
         ? categories
         .FirstOrDefault(g => g.Id == currentGroup)?
         .Title
         : "All";
+
+    decimal pageTotal = ListViewModel<Book>.TotalPages;
+    decimal currentPage = ListViewModel<Book>.CurrentPage;
+
+    var request = ViewContext.HttpContext.Request;
+    var returnUrl = request.Path + request.QueryString.ToUriComponent();
+    var domain = request.Host; 
 }
 
-<h1>View</h1>
-
-<p>
-    <a asp-action="Create">Create New</a>
-</p>
 <div class="container">
-    <div class="card-deck row">
+  <div class="card-deck row" style="margin:30px;">
 <div class="col-2">
 <div class="dropdown">
   <a class="btn btn-secondary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-    @text
+                    @text
   </a>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-        @foreach (var cat in @categories) {
+                    @foreach (var cat in @categories) {
                         @if (!(cat.Title == text)) {
-                            <a class="dropdown-item" href="?group=@cat.Id">@cat.Title</a>
+                            <a class="dropdown-item" href="https://@domain/Catalog/Page_1/@cat.Id">@cat.Title</a>
                         }
                     }
                     @if (text != "All") { 
-                                <a class="dropdown-item" asp-action="Index" asp-controller="Book">All</a>
+                        <a class="dropdown-item" href="https://@domain/Catalog/Page_1">All</a>
                     }
   </div>
+                
 </div>
 
 </div>
+<div class="card-group" style="margin-left:15%;text-align:center;" id="list">
+    <partial name="_ListPartial" model="@Model" />
+</div>
+<nav aria-label="Page navigation example">
+    <ul class="pagination justify-content-center">
+                @for (var i = 0; i < pageTotal; i++) {
+                        <pager action="Index" controller="Book" group-id="@currentGroup" page-total="@(int)pageTotal" page-current="@(int)(i+1)">@(i + 1)</pager>
+                }
 
-        @foreach (var item in Model) {
-            <partial name="_ListItemPartial" model="@item" />
-        }
+    </ul>
+</nav>
+
 </div>
 </div>
-
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript">
+ $(document).ready(function () {
+        $(".page-link").click(function (e) {
+            e.preventDefault();
+            console.log("Change active link")
+            var uri = this.attributes["href"].value;
+            $("#list").load(uri);
+            $(".active").removeClass("active disabled");
+            $(this).parent().addClass("active");
+            history.pushState(null, null, uri);
+        });
+    });
+</script>
 
 

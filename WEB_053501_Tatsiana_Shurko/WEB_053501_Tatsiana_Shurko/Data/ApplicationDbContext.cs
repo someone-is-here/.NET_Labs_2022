@@ -8,6 +8,5 @@ namespace WEB_053501_Tatsiana_Shurko.Data
         public ApplicationDbContext(DbContextOptions<ApplicationDbContext> options)
             : base(options) {
         }
-        public DbSet<ApplicationUser>? applicationUsers { get; set; }
     }
 }

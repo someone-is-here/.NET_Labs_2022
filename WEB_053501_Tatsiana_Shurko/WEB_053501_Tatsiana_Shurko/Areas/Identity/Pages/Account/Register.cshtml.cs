@@ -120,11 +120,7 @@ namespace WEB_053501_Tatsiana_Shurko.Areas.Identity.Pages.Account {
                     await (Input.Image).OpenReadStream().ReadAsync(user.Image, 0, (int)(Input.Image).Length);
                 }
 
-                Console.WriteLine(Input.Email, Input.Password, Input.ConfirmPassword, Input.Image, Input.Image.ContentType);
-                Console.WriteLine("((((((((())))))))))))))");
-
                 var result = await _userManager.CreateAsync(user, Input.Password);
-                Console.WriteLine(result.Errors);
 
                 if (result.Succeeded) {
                     _logger.LogInformation("User created a new account with password.");

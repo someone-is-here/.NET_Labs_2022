@@ -49,7 +49,9 @@ namespace WEB_053501_Tatsiana_Shurko {
                 options.Password.RequireUppercase = false;
                 options.Password.RequireDigit = false;
                 options.SignIn.RequireConfirmedAccount = true;
-            }).AddDefaultUI().AddEntityFrameworkStores<ApplicationDbContext>().AddDefaultTokenProviders();
+            }).AddDefaultUI()
+            .AddEntityFrameworkStores<ApplicationDbContext>()
+            .AddDefaultTokenProviders();
 
             services.AddAuthorization();
         }
