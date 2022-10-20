@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using WEB_053501_Tatsiana_Shurko.Data;
+using WEB_053501_Tatsiana_Shurko.Models;
 
 namespace WEB_053501_Tatsiana_Shurko.Entities {
     public class DbInitializer {

@@ -1,9 +1,9 @@
-﻿namespace WEB_053501_Tatsiana_Shurko.TagHelper {
-    
+﻿namespace WEB_053501_Tatsiana_Shurko.TagHelper
+{
+
     using Microsoft.AspNetCore.Razor.TagHelpers;
     using Microsoft.AspNetCore.Routing;
     using System.ComponentModel;
-    using WEB_053501_Tatsiana_Shurko.Entities;
     using WEB_053501_Tatsiana_Shurko.Models;
 
     public class PagerTagHelper: TagHelper {

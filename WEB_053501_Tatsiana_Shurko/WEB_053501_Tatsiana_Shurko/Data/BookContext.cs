@@ -1,7 +1,8 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using WEB_053501_Tatsiana_Shurko.Entities;
+using WEB_053501_Tatsiana_Shurko.Models;
 
-namespace WEB_053501_Tatsiana_Shurko.Data {
+namespace WEB_053501_Tatsiana_Shurko.Data
+{
     public class BookContext:DbContext {
         public DbSet<Book> Books { get; set; }
         public DbSet<Category> Categories { get; set; }

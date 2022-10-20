@@ -3,10 +3,10 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using System.Collections.Generic;
 using WEB_053501_Tatsiana_Shurko.Data;
-using WEB_053501_Tatsiana_Shurko.Entities;
 using WEB_053501_Tatsiana_Shurko.Models;
 
-namespace WEB_053501_Tatsiana_Shurko.Controllers {
+namespace WEB_053501_Tatsiana_Shurko.Controllers
+{
     public class BookController : Controller {
         private BookContext _context;
         private decimal _amountPerPage = 3;

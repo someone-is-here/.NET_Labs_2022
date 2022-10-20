@@ -2,8 +2,10 @@
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Xml.Linq;
 
-namespace WEB_053501_Tatsiana_Shurko.Entities {
-    public class Book {
+namespace WEB_053501_Tatsiana_Shurko.Models
+{
+    public class Book
+    {
         public int Id { get; set; }
 
         public Category? Category { get; set; }
@@ -21,7 +23,8 @@ namespace WEB_053501_Tatsiana_Shurko.Entities {
         public string? MimeType { get; set; }
 
     }
-    public class Category {
+    public class Category
+    {
         public int Id { get; set; }
         public string? Title { get; set; }
 
