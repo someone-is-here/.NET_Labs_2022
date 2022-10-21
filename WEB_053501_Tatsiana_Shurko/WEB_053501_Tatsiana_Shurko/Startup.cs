@@ -10,9 +10,11 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.Extensions.Logging;
 using Microsoft.Extensions.Options;
 using WEB_053501_Tatsiana_Shurko.Data;
 using WEB_053501_Tatsiana_Shurko.Entities;
+using WEB_053501_Tatsiana_Shurko.Models;
 
 namespace WEB_053501_Tatsiana_Shurko {
     public class Startup {
@@ -27,8 +29,6 @@ namespace WEB_053501_Tatsiana_Shurko {
                 options.LoginPath = $"/Identity/Account/Login";
                 options.LogoutPath = $"/Identity/Account/Logout";
             });
-
-
 
             services.AddControllersWithViews();
             services.AddRazorPages();
@@ -54,9 +54,22 @@ namespace WEB_053501_Tatsiana_Shurko {
             .AddDefaultTokenProviders();
 
             services.AddAuthorization();
+
+            services.AddDistributedMemoryCache();
+            services.AddSession(opt =>
+            {
+                opt.Cookie.HttpOnly = true;
+                opt.Cookie.IsEssential = true;
+            });
+
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<Cart>(sp => CartService.GetCart(sp));
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
+            services.AddScoped<Cart>(sp => CartService.GetCart(sp));
         }
 
-        public void Configure(IApplicationBuilder app, IWebHostEnvironment env) {
+        public void Configure(IApplicationBuilder app, IWebHostEnvironment env, ILoggerFactory loggerFactory) {
             if (env.IsDevelopment()) {
                 app.UseDeveloperExceptionPage();
             } else {
@@ -69,11 +82,14 @@ namespace WEB_053501_Tatsiana_Shurko {
             app.UseStaticFiles();
 
             app.UseRouting();
+            app.UseSession();
 
             app.UseAuthentication();
             app.UseAuthorization();
 
             DbInitializer.Initialize(app);
+
+            app.UseMiddleware<LogMiddleware>();
 
             app.UseEndpoints(endpoints =>
             {
@@ -82,6 +98,9 @@ namespace WEB_053501_Tatsiana_Shurko {
                     pattern: "{controller=Home}/{action=Index}/{id?}");
                 endpoints.MapRazorPages();
             });
+            /*            app.Run(async (context) => {
+                            logger.LogInformation($"Processing request {context.Request.Path} -- {context.Response.StatusCode}");
+                        });*/
         }
     }
 }

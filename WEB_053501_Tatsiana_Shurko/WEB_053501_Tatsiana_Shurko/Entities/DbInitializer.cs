@@ -41,15 +41,15 @@ namespace WEB_053501_Tatsiana_Shurko.Entities {
             }
                 if (!context.Books.Any()) {
                 context.Books.AddRange(
-                    new Book { Title = "Harry potter and the philosopher's stone", Discription = "J. K. Rowling, 1997", Price = 13.45f, ImagePath = "images/books/1.jpg", Category =fantasy },
-                    new Book { Title = "Harry potter and the chamber of secrets", Discription = "J. K. Rowling, 1998", Price = 13.45f, ImagePath = "images/books/2.jpg", Category = fantasy },
-                    new Book { Title = "Harry potter and the prisoner of azkaban", Discription = "J. K. Rowling, 1999", Price = 13.45f, ImagePath = "images/books/3.jpg", Category = fantasy },
-                    new Book { Title = "Harry potter and the goblet of fire", Discription = "J. K. Rowling, 2000", Price = 13.45f, ImagePath = "images/books/4.jpg", Category = fantasy },
-                    new Book { Title = "Harry potter and the order of the phoenix", Discription = "J. K. Rowling, 2003", Price = 13.45f, ImagePath = "images/books/5.jpg", Category = fantasy },
-                    new Book { Title = "Harry potter and the half-blood prince", Discription = "J. K. Rowling, 2005", Price = 13.45f, ImagePath = "images/books/6.jpg", Category = fantasy },
-                    new Book { Title = "Harry potter and the deathly hallows", Discription = "J. K. Rowling, 2007", Price = 13.45f, ImagePath = "images/books/7.jpg", Category = fantasy },
-                    new Book { Title = "The Alchemist's Secret", Discription = "Scott Mariani, 2007", Price = 11.99f, ImagePath = "images/books/8.jpg", Category = thrillers },
-                    new Book { Title = "The Mozart Conspiracy", Discription = "Scott Mariani, 2008", Price = 11.99f, ImagePath = "images/books/9.jpg", Category = thrillers }
+                    new Book { Title = "Harry potter and the philosopher's stone", Discription = "J. K. Rowling, 1997", Price = 13.45f, ImagePath = "images/books/1.jpg", CategoryId =fantasy.Id },
+                    new Book { Title = "Harry potter and the chamber of secrets", Discription = "J. K. Rowling, 1998", Price = 13.45f, ImagePath = "images/books/2.jpg", CategoryId = fantasy.Id },
+                    new Book { Title = "Harry potter and the prisoner of azkaban", Discription = "J. K. Rowling, 1999", Price = 13.45f, ImagePath = "images/books/3.jpg", CategoryId = fantasy.Id },
+                    new Book { Title = "Harry potter and the goblet of fire", Discription = "J. K. Rowling, 2000", Price = 13.45f, ImagePath = "images/books/4.jpg", CategoryId = fantasy.Id },
+                    new Book { Title = "Harry potter and the order of the phoenix", Discription = "J. K. Rowling, 2003", Price = 13.45f, ImagePath = "images/books/5.jpg", CategoryId = fantasy.Id },
+                    new Book { Title = "Harry potter and the half-blood prince", Discription = "J. K. Rowling, 2005", Price = 13.45f, ImagePath = "images/books/6.jpg", CategoryId = fantasy.Id },
+                    new Book { Title = "Harry potter and the deathly hallows", Discription = "J. K. Rowling, 2007", Price = 13.45f, ImagePath = "images/books/7.jpg", CategoryId = fantasy.Id },
+                    new Book { Title = "The Alchemist's Secret", Discription = "Scott Mariani, 2007", Price = 11.99f, ImagePath = "images/books/8.jpg", CategoryId = thrillers.Id },
+                    new Book { Title = "The Mozart Conspiracy", Discription = "Scott Mariani, 2008", Price = 11.99f, ImagePath = "images/books/9.jpg", CategoryId = thrillers.Id }
                 );
                 context.SaveChanges();
             }

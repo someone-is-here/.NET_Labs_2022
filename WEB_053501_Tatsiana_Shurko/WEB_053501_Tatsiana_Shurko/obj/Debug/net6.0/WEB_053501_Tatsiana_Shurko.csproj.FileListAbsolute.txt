@@ -275,3 +275,9 @@ D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.NET.StringTools.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\AutoMapper.dll
 D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Microsoft.Extensions.DependencyInjection.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Serilog.Extensions.Logging.File.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Serilog.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Serilog.Extensions.Logging.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Serilog.Formatting.Compact.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Serilog.Sinks.Async.dll
+D:\University\C# Labs\WEB_053501_Tatsiana_Shurko\WEB_053501_Tatsiana_Shurko\bin\Debug\net6.0\Serilog.Sinks.File.dll

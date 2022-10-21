@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "8xRtZAz0AmB4QoRhZXj3NdL5ACHwRlzm6AVAXmaeHUk=",
+  "Hash": "iniBl8c1ZWa+hIsozLe7kcY+lmEPlUoJG18wuaoJapQ=",
   "Source": "WEB_053501_Tatsiana_Shurko",
   "BasePath": "_content/WEB_053501_Tatsiana_Shurko",
   "Mode": "Default",
@@ -1120,6 +1120,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\images\\books\\1.jpg"
+    },
+    {
+      "Identity": "D:\\University\\C# Labs\\WEB_053501_Tatsiana_Shurko\\WEB_053501_Tatsiana_Shurko\\wwwroot\\images\\books\\10.jpg",
+      "SourceId": "WEB_053501_Tatsiana_Shurko",
+      "SourceType": "Discovered",
+      "ContentRoot": "D:\\University\\C# Labs\\WEB_053501_Tatsiana_Shurko\\WEB_053501_Tatsiana_Shurko\\wwwroot\\",
+      "BasePath": "_content/WEB_053501_Tatsiana_Shurko",
+      "RelativePath": "images/books/10.jpg",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\images\\books\\10.jpg"
     },
     {
       "Identity": "D:\\University\\C# Labs\\WEB_053501_Tatsiana_Shurko\\WEB_053501_Tatsiana_Shurko\\wwwroot\\images\\books\\2.jpg",

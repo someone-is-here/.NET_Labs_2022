@@ -8,6 +8,7 @@ namespace WEB_053501_Tatsiana_Shurko.Models
     {
         public int Id { get; set; }
 
+        public int? CategoryId { get; set; }
         public Category? Category { get; set; }
 
         [Display(Name = "Title")]
@@ -19,6 +20,11 @@ namespace WEB_053501_Tatsiana_Shurko.Models
 
         [Required]
         public float? Price { get; set; }
+
+        [Display(Name = "Avatar")]
+        [NotMapped]
+        public IFormFile Image { get; set; }
+
         public string? ImagePath { get; set; }
         public string? MimeType { get; set; }
 

@@ -10,16 +10,21 @@ namespace WEB_053501_Tatsiana_Shurko.Controllers
     public class BookController : Controller {
         private BookContext _context;
         private decimal _amountPerPage = 3;
+        private readonly ILogger _logger;
 
-        public BookController(BookContext context) {
+        public BookController(BookContext context, ILoggerFactory logFactory) {
             _context = context;
             ListViewModel<Book>.AmountPerPage = (int)_amountPerPage;
+            _logger = logFactory.CreateLogger<BookController>();
         }
 
         [Route("Catalog")]
         [Route("Catalog/Page_{currentPage:int}/{group:int?}")]
         public IActionResult Index(int? group, int currentPage = 1) {
             group = group ?? 0;
+
+            _logger.LogInformation($"Group:{group}; current_page:{currentPage}");
+
             ListViewModel<Book>.GroupId = group ?? 0;
             ListViewModel<Book>.CurrentPage = currentPage;
 

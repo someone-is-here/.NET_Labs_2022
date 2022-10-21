@@ -17,12 +17,12 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations.Book
         {
 #pragma warning disable 612, 618
             modelBuilder
-                .HasAnnotation("ProductVersion", "6.0.8")
+                .HasAnnotation("ProductVersion", "6.0.10")
                 .HasAnnotation("Relational:MaxIdentifierLength", 128);
 
             SqlServerModelBuilderExtensions.UseIdentityColumns(modelBuilder, 1L, 1);
 
-            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Entities.Book", b =>
+            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.Book", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -58,7 +58,7 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations.Book
                     b.ToTable("Books");
                 });
 
-            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Entities.Category", b =>
+            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.Category", b =>
                 {
                     b.Property<int>("Id")
                         .ValueGeneratedOnAdd()
@@ -74,16 +74,16 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations.Book
                     b.ToTable("Categories");
                 });
 
-            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Entities.Book", b =>
+            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.Book", b =>
                 {
-                    b.HasOne("WEB_053501_Tatsiana_Shurko.Entities.Category", "Category")
+                    b.HasOne("WEB_053501_Tatsiana_Shurko.Models.Category", "Category")
                         .WithMany("Books")
                         .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
                 });
 
-            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Entities.Category", b =>
+            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.Category", b =>
                 {
                     b.Navigation("Books");
                 });

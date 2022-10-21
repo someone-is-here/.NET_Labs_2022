@@ -1,7 +1,5 @@
 ﻿<div class="navbar-nav">
-    @foreach (var item in Model){
-        <a asp-controller="@item.Controller" asp-action="@item.Action" class="@item.CostClassStyle">
-                        @item.Cost$ <i class="@item.AmountClassStyle" style="@item.AmountStyle"></i> (@item.Amount)
+        <a asp-controller="Cart" asp-action="Index" class="@ViewBag.CostClassStyle">
+        @Model.Price $ <i class="@ViewBag.AmountClassStyle" style="@ViewBag.AmountStyle"></i> (@Model.Count)
         </a>
-    }
 </div>
