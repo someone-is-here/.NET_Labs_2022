@@ -1,1 +1,1 @@
-Repository fot .NET CORE labs
+Repository fot .NET CORE Labs
