@@ -1,0 +1,29 @@
+﻿@page "/listofbooks"
+@using Blazor1.Shared
+@inject HttpClient client
+
+<div class="list-group">
+        <BooksList @bind-Books="books"  SelectedIdChanged="ShowDetails"></BooksList>
+                <BookDetail @bind-Book="SelectedBook" @bind-HostAdress="apiBaseAddress"></BookDetail>
+        </div>
+
+@code {
+    [Parameter]
+    public ListViewModel? books { get; set; }
+
+    [Parameter]
+    public DetailViewModel? SelectedBook { get; set; }
+
+    string apiBaseAddress = "https://localhost:7101";
+
+    protected override async Task OnInitializedAsync() {
+        var resAdress = apiBaseAddress + "/api/Books";
+        var response = await client.GetAsync(resAdress);
+        if (response.IsSuccessStatusCode) {
+            books = await client.GetFromJsonAsync<ListViewModel?>(resAdress);
+        }
+    }
+    private async Task ShowDetails(int id) {
+        SelectedBook = books.listWithBooks.ElementAt(id - 1);
+    }
+}
