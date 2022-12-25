@@ -5,11 +5,7 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 namespace WEB_053501_Tatsiana_Shurko.Migrations
 {
-<<<<<<<< HEAD:WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Migrations/20220919215338_FirstMigration.cs
-    public partial class FirstMigration : Migration
-========
-    public partial class AddIdentity : Migration
->>>>>>>> 97233bf91755c70c1f39ee91b94e1ffc394b9e9a:WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Migrations/20220913140039_AddIdentity.cs
+    public partial class InitialCreate : Migration
     {
         protected override void Up(MigrationBuilder migrationBuilder)
         {
@@ -32,11 +28,8 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations
                 columns: table => new
                 {
                     Id = table.Column<string>(type: "nvarchar(450)", nullable: false),
-<<<<<<<< HEAD:WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Migrations/20220919215338_FirstMigration.cs
                     Image = table.Column<byte[]>(type: "varbinary(max)", nullable: true),
                     ContentType = table.Column<string>(type: "nvarchar(max)", nullable: true),
-========
->>>>>>>> 97233bf91755c70c1f39ee91b94e1ffc394b9e9a:WEB_053501_Tatsiana_Shurko/WEB_053501_Tatsiana_Shurko/Migrations/20220913140039_AddIdentity.cs
                     UserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     NormalizedUserName = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),
                     Email = table.Column<string>(type: "nvarchar(256)", maxLength: 256, nullable: true),

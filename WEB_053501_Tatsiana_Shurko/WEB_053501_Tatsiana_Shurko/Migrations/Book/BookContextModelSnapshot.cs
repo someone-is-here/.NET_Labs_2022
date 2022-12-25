@@ -58,6 +58,27 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations.Book
                     b.ToTable("Books");
                 });
 
+            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.CartItem", b =>
+                {
+                    b.Property<int>("Id")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
+
+                    b.Property<int>("BookId")
+                        .HasColumnType("int");
+
+                    b.Property<int>("Quantity")
+                        .HasColumnType("int");
+
+                    b.HasKey("Id");
+
+                    b.HasIndex("BookId");
+
+                    b.ToTable("CartItem");
+                });
+
             modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.Category", b =>
                 {
                     b.Property<int>("Id")
@@ -81,6 +102,17 @@ namespace WEB_053501_Tatsiana_Shurko.Migrations.Book
                         .HasForeignKey("CategoryId");
 
                     b.Navigation("Category");
+                });
+
+            modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.CartItem", b =>
+                {
+                    b.HasOne("WEB_053501_Tatsiana_Shurko.Models.Book", "Book")
+                        .WithMany()
+                        .HasForeignKey("BookId")
+                        .OnDelete(DeleteBehavior.Cascade)
+                        .IsRequired();
+
+                    b.Navigation("Book");
                 });
 
             modelBuilder.Entity("WEB_053501_Tatsiana_Shurko.Models.Category", b =>
