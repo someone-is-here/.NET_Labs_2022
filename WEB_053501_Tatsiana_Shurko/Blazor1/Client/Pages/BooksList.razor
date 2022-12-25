@@ -1,0 +1,37 @@
+﻿@using Blazor1.Shared
+
+
+<h3>BooksList</h3>
+@if (Books != null) { 
+@foreach(DetailViewModel? book in Books.listWithBooks) {
+    @if (book.Id == selectedId) {
+        <button type="button" class="list-group-item list-group-item-action active"
+                         @onclick="@(e=>Selected(e, book.Id))">
+            @book.Id - @book.Title
+        </button>
+    } else {
+
+            <button type="button" class="list-group-item list-group-item-action"
+                         @onclick="@(e=>Selected(e, book.Id))">
+            @book.Id - @book.Title
+               </button> 
+    }
+}
+}
+
+@code {
+    private int? selectedId = null;
+
+    [Parameter]
+    public ListViewModel? Books { get; set; }
+
+    [Parameter]
+    public EventCallback<int> SelectedIdChanged { get; set; }
+    [Parameter]
+    public EventCallback<ListViewModel?> BooksChanged { get; set; }
+
+    private void Selected(MouseEventArgs e, int id) {
+        selectedId = id;
+        SelectedIdChanged.InvokeAsync(id);
+    }
+}

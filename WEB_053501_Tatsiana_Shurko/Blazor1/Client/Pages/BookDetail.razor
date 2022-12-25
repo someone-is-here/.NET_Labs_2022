@@ -1,0 +1,26 @@
+﻿@using Blazor1.Shared
+
+@if (Book != null) { 
+    <div style="margin-bottom:15px;">
+        <div class="card">
+          <div class="card-body" style="text-align:center;">
+              <h2>@Book.Title</h2>
+              <img src="@HostAdress/@Book.ImagePath" style="height:300px; width:210px;"/>
+            <p class="card-text">@Book.Discription</p>
+            <p class="card-title mt-6">@Book.Price$</p>
+          </div>
+        </div>
+      </div>
+}
+@code {
+    [Parameter]
+    public DetailViewModel? Book { get; set; }
+
+    [Parameter]
+    public string HostAdress { get; set; }
+
+    [Parameter]
+    public EventCallback<DetailViewModel?> BookChanged { get; set; }
+    [Parameter]
+    public EventCallback<string> HostAdressChanged { get; set; }
+}

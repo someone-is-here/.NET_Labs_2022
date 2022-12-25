@@ -1,0 +1,5 @@
+﻿<div class="navbar-nav">
+        <a asp-controller="Cart" asp-action="Index" class="@ViewBag.CostClassStyle">
+        @Model.Price $ <i class="@ViewBag.AmountClassStyle" style="@ViewBag.AmountStyle"></i> (@Model.Count)
+        </a>
+</div>
